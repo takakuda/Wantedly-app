@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: Wantedly_production
-  username: Wantedly
+  username: root
   password: <%= ENV['WANTEDLY_DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
