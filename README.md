@@ -1,24 +1,57 @@
-# README
+# DB設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##users table
+|     colum     |     type      |               option               |
+|:--------------|--------------:|:----------------------------------:|
+|name           |string         |index: true,null: false,unique: true|
+|user_id        |references     |                                    |
 
-Things you may want to cover:
 
-* Ruby version
+## Association
+- ・has_many :applications
 
-* System dependencies
 
-* Configuration
+## campanies table
+|     colum     |     type      |              option                |
+|:--------------|--------------:|:----------------------------------:|
+|name           |string         |index: true,null: false,unique: true|
+|campany_id     |references     |
 
-* Database creation
 
-* Database initialization
+## Association
+- ・has_many :recruitments
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## recruitments table
+|     colum     |     type      |              option                |
+|:--------------|--------------:|:----------------------------------:|
+|body           |text           |null: false                         |
+|image          |file           |                                    |
+|recruitment_id |references     |foreign_key: true                   |
 
-* Deployment instructions
 
-* ...
+## Association
+- ・belongs_to :campany
+- ・has_many :applications, through :recruitment_applications
+
+
+## applications table
+|     colum     |     type      |              option                |
+|:--------------|--------------:|:----------------------------------:|
+|application_id |references     |foreign_key: true                   |
+|body           |text           |                                    |
+
+
+
+## Association
+- ・belongs_to :user
+- ・has_many :recuritments, through :recruitment_applications
+
+
+## recruitment_applications table
+|     colum     |     type      |              option                |
+|:--------------|--------------:|:----------------------------------:|
+|recruitment_id |references     |foreign_key: true                   |
+|application_id |references     |foreign_key: true                   |
+
+
