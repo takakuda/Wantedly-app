@@ -8,7 +8,7 @@
 
 
 ## Association
-- ・has_many :applications
+- ・has_many :applies
 
 
 ## campanies table
@@ -32,10 +32,10 @@
 
 ## Association
 - ・belongs_to :campany
-- ・has_many :applications, through :recruitment_applications
+- ・has_many :applications, through :recruitment_applies
 
 
-## applications table
+## applies table
 |     colum     |     type      |              option                |
 |:--------------|--------------:|:----------------------------------:|
 |application_id |references     |foreign_key: true                   |
@@ -45,7 +45,7 @@
 
 ## Association
 - ・belongs_to :user
-- ・has_many :recuritments, through :recruitment_applications
+- ・has_many :recuritments, through :recruitment_applies
 
 
 ## recruitment_applications table
