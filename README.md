@@ -1,6 +1,6 @@
 # DB設計
 
-##users table
+##users table (campany)
 |     colum     |     type      |               option               |
 |:--------------|--------------:|:----------------------------------:|
 |name           |string         |index: true,null: false,unique: true|
@@ -8,7 +8,20 @@
 
 
 ## Association
+- ・has_many :recruitments
+
+
+
+## user table (recruit)
+|     colum     |     type      |               option               |
+|:--------------|--------------:|:----------------------------------:|
+|name           |string         |               option               |
+|user_id        |references     |                                    |
+
+
+## Association
 - ・has_many :applies
+
 
 
 ## campanies table
