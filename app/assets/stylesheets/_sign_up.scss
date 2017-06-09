@@ -1,0 +1,122 @@
+.header {
+  width: 1440px;
+  height: 60px;
+  background-color: white;
+  &-logo {
+    width: 191px;
+    height: 60px;
+    .logo {
+      width: 153px;
+      height: 22px;
+      padding-top: 19px;
+      padding-left: 19px;
+    }
+  }
+}
+
+.registrations {
+  width: 1440px;
+  height: 809px;
+  &__main {
+    width: 980px;
+    height: 809px;
+    margin: 0 auto;
+    &-left {
+      width: 631px;
+      height: 809px;
+      margin-right: 40px;
+      padding: 40px 40px 40px 0;
+      border-right: solid #D7DBDF;
+      float: left;
+      h1 {
+        font-weight: 600;
+        font-size: 22px;
+      }
+      &__sign_up {
+        border: 1px solid #D7DBDF;
+        position: relative;
+        width: 590px;
+        height: 560px;
+        &__select {
+          width: 590px;
+          height: 40px;
+          &-contents {
+            width: 508px;
+            height: 44px;
+            margin-top: 10px;
+            .field-label {
+              font-size: 14px;
+              line-height: 22px;
+              color: #24282A;
+              margin-left: 41px;
+
+
+
+              .field-input {
+                border-radius: 3px;
+                margin-left: 161px;
+
+                 #user_email {
+                width: 200px;
+                height: 20px;
+              }
+              }
+            }
+          }
+        }
+        .field-check_box {
+          margin-left: 121px;
+          float: left;
+        }
+        .field-check_box {
+          margin-left: 101px;
+          float: left;
+        }
+        #birthday_month {
+          border-radius: 3px;
+          border: 1px solid #D7DBDF;
+        }
+        #birthday_day {
+          border-radius: 3px;
+          border: 1px solid #D7DBDF;
+        }
+        #email {
+          margin-left: 111px;
+        }
+        #password {
+          margin-left: 91px;
+        }
+          .registrations__main-left__sign_up__select-bottom {
+            width: 508px;
+            height: 43px;
+            border-top: 1px solid #D7DBDF;
+            font-size: 12px;
+            padding-top: 20px;
+            margin: 40px 0 15px 30px;
+            #agree {
+              padding-left: 20px;
+            }
+          }
+          .button {
+            background: #6CC644;
+            border-color: #4f8338;
+            color: #fff !important;
+            font-weight: normal;
+            height: 60px;
+            line-height: 60px;
+            font-size: 18px;
+            padding: 0 70px;
+            text-decoration: none;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            margin-left: 40px;
+          }
+          .link {
+            color: #006F8E;
+            font-size: 14px;
+            padding-left: 20px;
+          }
+        }
+    }
+  }
+}
