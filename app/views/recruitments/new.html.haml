@@ -1,0 +1,83 @@
+.header
+  .header__logo
+    %a{:href => "/"}
+      %img.icon{:alt => "Wantedly", :height => "44px", :src => "https://de7iszmjjjuya.cloudfront.net/assets/wantedly-logo-5906d9a368d0bcdd2919553127357d4d.svg", :width => "44px", :margin => "0"}/
+  .header__menu
+    %ul
+      %li
+        %a{:href => "/"} 管理画面
+      %li
+        %a{:href => "/"} 募集一覧
+      %li
+        %a{:href => "/"} フィード
+      %li
+        %a{:href => "/"} ツール
+      %li
+        %form.search{"accept-charset" => "UTF-8", :action => "/search", :method => "get"}
+          %span{:style => "position: relative; display: inline-block; direction: ltr;"}
+            %input.input{:autocomplete => "off", :dir => "auto", :name => "q", :placeholder => "人や会社、募集を検索", :spellcheck => "false", :style => "position: relative; vertical-align: top;", :type => "text"}/
+          %i.wt-icon.wt-icon-search-short
+  .header__profile
+    %img.photo{:height => "40", :src => "/assets/icon.photo.jpg", :style => "display: block", :width => "40"}
+= form_for @recruitment do |f|
+
+  .recruitment-main
+    .recruitment-main__bar
+      .recruitment-main__bar__inner
+        .recruitment-main__bar__inner__section
+          %li.item 新規募集作成
+          %a{:href => "/"}
+          %li.item ダッシュボード
+          .punctuation 管理
+          %li.item 募集
+          %li.item フィード
+          %li.item アナリティクス
+          .punctuation 候補者
+          %li.item 候補者
+          %li.item メッセージ
+    .recruitment-main__right
+      .recruitment-main__right__contents
+        .recruitment-main__right__contents__header
+          %ul#tabs
+            %li.content STEP1 会社情報の入力
+            %li.content STEP2 社員の追加
+            %li.content STEP3 募集の作成
+        .recruitment-main__right__contents__message
+          %i.icon-heart{:style => "color: pink; line-height: 1.2;"}
+            %h2.center-massage 求人ではなく、ラブレターを書くつもりで
+            %p 大事なのは、「会いにいきたい」と思って貰えることです。
+            %p 飾らずに、自分の言葉で、まっすぐに自分たちの熱い思いを書き綴りましょう。
+            %p.bottom-message 理想的な募集要項を作成していただくため、コンテンツ・クオリティ・ガイドラインを設けております。必ずご一読下さい。
+        .recruitment-main__right__contents__job
+          .recruitment-main__right__contents__job__form
+            .field-label
+              = f.label "募集する職種は？"
+            .field-select
+              = f.select :job_was, Job.all.map{|o| [o.name, o.id]}
+        .recruitment-main__right__contents__title
+          .recruitment-main__right__contents__title__form
+            .field-label
+              = f.label "タイトルを入力する"
+              %abbr (必須)
+            .field-text
+              = f.text_field :title, placeholder: :ユーザー6万人の人材サイトに喝を入れるwebデザイナー募集
+        .recruitment-main__right__contents__detail
+          .recruitment-main__right__contents__detail__form
+            .field-label
+              = f.label "募集の詳細を入力する"
+              %abbr (必須)
+            .field-detail
+              = f.text_field :text, placeholder: :募集要項の詳細を入力して下さい
+        .recruitment-main__right__contents__image
+          .recruitment-main__right__contents__image__form
+            .field-label
+              = f.label "会社ロゴ画像"
+              %abbr (任意)
+            .field-image
+              = f.file_field :image
+        .recruitment-main__right__contents__bottom
+          = link_to "戻る", root_path, class: "return-btn"
+          = f.submit "投稿する", class: "send-btn"
+
+
+

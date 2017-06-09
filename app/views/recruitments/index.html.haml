@@ -1,0 +1,40 @@
+- if campany_signed_in?
+  = render '/recruitments/campany_header'
+- elsif user_signed_in?
+  = render '/recruitments/user_header'
+- else
+  = render '/recruitments/home_header'
+
+
+
+.main-contents
+  .main-contents__company
+    =image_tag "CompanyOverview.png"
+    .main-contents__details
+      .main-contents__details__job
+        エンジニア
+      %h2.main-contents__details__title ワクワクするような企業を一番近くでサポートして、もっと成長させてくれる人
+      %p.main-contents__details__name
+        %img.logo{:alt => "Wantedly", :height => "44px", :src => "https://de7iszmjjjuya.cloudfront.net/assets/wantedly-logo-5906d9a368d0bcdd2919553127357d4d.svg", :width => "44px", :margin => "0"}/
+        %a{:href => "/"} 株式会社リクルートスタッフ
+.recruitment-contents
+  .recruitment-contents__center
+    .recruitment-contents__center__main
+      .recruitment-contents__center__main-menu
+        %p.recruitment-count 10/16169
+        %ul
+          %li
+            %a おすすめ
+          %li
+            %a 新着
+          %li
+            %a 人気
+        .h4 並び替え
+      .recruitment-contents__center__main-area
+        .recruitment-contents__center__main-area-messages
+          = render @recruitments
+
+
+
+
+
