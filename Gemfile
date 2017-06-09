@@ -37,10 +37,17 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'unicorn'
 gem 'mechanize'
+gem 'haml-rails'
+gem 'erb2haml'
+gem 'devise'
+gem 'pry-rails'
+gem 'carrierwave'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  source "https://rubygems.org"
   gem 'capistrano'
+  gem 'capistrano-safe-deploy-to', '~> 1.1.1'
   gem 'capistrano-rbenv'
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
