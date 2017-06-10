@@ -15,9 +15,14 @@ class RecruitmentsController < ApplicationController
     redirect_to root_path
   end
 
+  def show
+    @recruitment = Recruitment.find(params[:id])
+  end
+
+
   private
 
   def recruitment_params
-    params.require(:recruitment).permit(:title, :text, :image )
+    params.require(:recruitment).permit(:title, :text, :image, :id)
   end
 end

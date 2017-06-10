@@ -1,0 +1,17 @@
+.detail-contents {
+  width: 1440px;
+  height: 5000px;
+  &__main {
+    width: 980px;
+    height: 5000px;
+    margin: 0 auto;
+    &__header {
+      width: 980px;
+      height: 675px;
+      &__title {
+        width: 980px;
+        height: 193px;
+      }
+    }
+  }
+}
