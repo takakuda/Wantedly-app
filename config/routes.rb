@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   root 'recruitments#index'
-  resources :recruitments
   devise_for :campanies, controllers: {
     sessions:      'campanies/sessions',
     password:      'campanies/passwords',
@@ -11,4 +10,8 @@ Rails.application.routes.draw do
     passwords:     'users/passwords',
     registrations: 'users/registrations'
   }
+  resources :recruitments do
+    resources :applies, only: [:create]
+  end
+  resources :users, only: [:show]
 end

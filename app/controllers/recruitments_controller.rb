@@ -17,6 +17,7 @@ class RecruitmentsController < ApplicationController
 
   def show
     @recruitment = Recruitment.find(params[:id])
+    @user = current_user.id
   end
 
 

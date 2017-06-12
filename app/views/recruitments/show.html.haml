@@ -24,5 +24,26 @@
   .detail-contents__main
     .detail-contents__main__header
       .detail-contents__main__header__title
+        .detail-contents__main__header__title__icon
         %h1.title
           = @recruitment.title
+        .detail-contents__main__header__title__name
+          .detail-contents__main__header__title__name__icon
+          %a.campany-name 株式会社 モンスターラボ
+      .detail-contents__main__header__image
+        .detail-contents__main__header__image__main
+          = @recruitment.image
+        %ul.bottom-menu
+          %li.time 2017/06/10
+          %li.friends 社員とあなたの共通の友達
+          %li.total-view 3577
+          %li.btn
+    .detail-contents__main__area
+      .detail-contents__main__area__inner
+    .detail-contents__main__side
+      .detail-contents__main__side__btn
+        .detail-contents__main__side__btn__inner
+          - if current_user
+            .apply-btn
+              = link_to  "話を聞きにいきたい", recruitment_applies_path(@recruitment), method: :post
+

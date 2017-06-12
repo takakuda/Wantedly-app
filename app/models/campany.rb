@@ -4,5 +4,5 @@ class Campany < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :recruitments
-  has_many :applys
+  has_many :applies
 end
