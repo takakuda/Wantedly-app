@@ -33,6 +33,7 @@
       &__left {
         width: 381px;
         height: 501px;
+        float: left;
         &__header {
           width: 379px;
           height: 41px;
@@ -85,12 +86,38 @@
                   height: 80px;
                   margin-left: 13px;
                   &__top {
-                    
+                    font-size: 13px;
+                    line-height: 1;
+                    font-weight: 600;
                   }
                 }
               }
             }
           }
+        }
+      }
+      &__right {
+        width: 599px;
+        height: 501px;
+        float: left;
+        &__title {
+          width: 599px;
+          height: 42px;
+          .title {
+            color: #00A4BB;
+            text-decoration: none;
+            font-size: 13px;
+            padding-left: 139px;
+          }
+        }
+        &__area {
+          width: 600px;
+          height: 307px;
+        }
+        &__message {
+          width: 600px;
+          height: 142px;
+          background: #f5f5f5;
         }
       }
     }
