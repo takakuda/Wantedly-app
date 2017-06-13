@@ -77,6 +77,26 @@
           font-size: 12px;
         }
       }
+      &__name {
+        width: 760px;
+        height: 141px;
+        border-bottom: 1px solid #9DA0A4;
+         &__form {
+          width: 700px;
+          height: 101px;
+          margin: 0 auto;
+          padding-top: 20px;
+          .field-label {
+            width: 240px;
+            font-size: 14px;
+            color: #45494B;
+          }
+            #recruitment_campany_name {
+              width: 425px;
+              height: 21px;
+            }
+        }
+      }
       &__job {
         width: 760px;
         height: 141px;
@@ -101,6 +121,7 @@
         width: 760px;
         height: 145px;
         border-bottom: 1px solid #9DA0A4;
+        border-left: 1px solid #9DA0A4;
         &__form {
           width: 700px;
           height: 105px;
