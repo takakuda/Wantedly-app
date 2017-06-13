@@ -1,10 +1,10 @@
 $(function() {
   $(".header__profile").on("click", function() {
-    $(".hidden-menu").fadeIn("slow");
+    $(".hidden-menu").show();
   });
 });
 $(function() {
   $(".main-contents").on("click", function() {
-    $(".hidden-menu").fadeOut("slow");
+    $(".hidden-menu").hide();
   });
 });
