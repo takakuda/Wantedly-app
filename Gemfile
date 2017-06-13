@@ -42,6 +42,8 @@ gem 'erb2haml'
 gem 'devise'
 gem 'pry-rails'
 gem 'carrierwave'
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
 
 group :development, :test do
   gem 'byebug', platform: :mri
