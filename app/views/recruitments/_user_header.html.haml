@@ -33,7 +33,7 @@
         .hidden-menu__visit
           %ul
             %li
-              %a.apply-visit{:href => "/"} 応募した企業
+              %a.apply-visit{:href => "/users/#{current_user.id}"} 応募した企業
             %li
               %a.apply-visit{:href => "/"} 保存した募集
         .hidden-menu__user

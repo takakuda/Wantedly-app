@@ -15,8 +15,9 @@
         .mypage__main__contents__left__list
           %ul
             %li
-              .campany-name
-                .campany-name__icon
-                .campany-name__detail
-                  .campany-name__detail__top
-                    = campany_name
+              - @recruitments.each do |recruitment|
+                .campany-name
+                  .campany-name__icon
+                  .campany-name__detail
+                    .campany-name__detail__top
+                      = recruitment.campany_name

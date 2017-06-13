@@ -48,6 +48,12 @@
             %p 大事なのは、「会いにいきたい」と思って貰えることです。
             %p 飾らずに、自分の言葉で、まっすぐに自分たちの熱い思いを書き綴りましょう。
             %p.bottom-message 理想的な募集要項を作成していただくため、コンテンツ・クオリティ・ガイドラインを設けております。必ずご一読下さい。
+        .recruitment-main__right__contents__name
+          .recruitment-main__right__contents__name__form
+            .field-label
+              = f.label "会社の名前は？"
+            .field-name
+              = f.text_field :campany_name, placeholder: :会社名を入力してください
         .recruitment-main__right__contents__job
           .recruitment-main__right__contents__job__form
             .field-label
