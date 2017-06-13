@@ -14,4 +14,5 @@ Rails.application.routes.draw do
     resources :applies, only: [:create]
   end
   resources :users, only: [:show]
+  get   'users/:id'   =>  'users#show'
 end
