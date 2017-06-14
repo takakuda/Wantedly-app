@@ -57,9 +57,24 @@
                 %li 人工知能
                 %li 英語
                 %li フルスタック
-
-
-
+            .job-style
+              %h5 分野
+              %ul
+                %li web エンジニア
+                %li モバイルエンジニア
+                %li インフラエンジニア
+            .job-style
+              %h5 地域
+              %ul
+                %li 北海道・東北
+                %li 中国・四国
+                %li 関東
+            .job-style
+              %h5 特徴
+              %ul
+                %li TechCrunchに掲載実績あり
+                %li 1億円以上の資金を調達済み
+                %li Skypeで話を聞ける
 
     .recruitment-contents__center__main
       .recruitment-contents__center__main-menu
@@ -75,6 +90,12 @@
         .recruitment-contents__center__main-area
           .recruitment-contents__center__main-area-messages
             = render @recruitments
+
+%footer.index-footer
+  .footer-inner
+    .footer-inner__main
+      .footer-logo
+        %img.logo{:src => "/assets/wantedly.logo.png"}
 
 #calendar
 
