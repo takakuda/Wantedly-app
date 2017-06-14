@@ -14,18 +14,18 @@
             = f.label "名前"
             .field-input
               = f.text_field :name
-          .field-label
-            = f.label "性別"
-          .field-input
-            = f.check_box :validate
-            = f.label "男性"
-          .field-input
-            = f.check_box :validate
-            = f.label "女性"
-          .field-label
-            = f.label "生年月日"
-          / .field-select
-          /   = f.select
+          / .field-label
+          /   = f.label "性別"
+          / .field-input
+          /   = f.check_box :validate
+          /   = f.label "男性"
+          / .field-input
+          /   = f.check_box :validate
+          /   = f.label "女性"
+          / .field-label
+          /   = f.label "生年月日"
+          / / .field-select
+          / /   = f.select
           .field-label
             = f.label "E-mail"
           .field-input
@@ -38,8 +38,8 @@
           .registrations__main-left__sign_up__select-bottom
             = f.check_box :validate
             利用規約とプライバシーポリシーに同意します。
-            .actions
-              = f.submit "登録する", class: 'return-btn'
+            .action
+              = f.submit "登録する", class: 'registration-btn'
           %p.link Emailでのログインはこちら
 
 
