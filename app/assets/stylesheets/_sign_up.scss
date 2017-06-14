@@ -57,6 +57,14 @@
             right: 150px;
             bottom: 1px;
           }
+          #campany_campany_name {
+            border: 1px solid #D7DBDF;
+            width: 282px;
+            height: 35px;
+            position: absolute;
+            right: 150px;
+            top: 70px;
+          }
           #user_email {
             border: 1px solid #D7DBDF;
             width: 282px;
@@ -65,7 +73,23 @@
             top: 140px;
             right: 150px;
           }
+          #campany_email {
+            border: 1px solid #D7DBDF;
+            width: 282px;
+            height: 35px;
+            position: absolute;
+            top: 140px;
+            right: 150px;
+          }
           #user_password {
+            border: 1px solid #D7DBDF;
+            width: 282px;
+            height: 35px;
+            position: absolute;
+            top: 210px;
+            right: 150px;
+          }
+          #campany_password {
             border: 1px solid #D7DBDF;
             width: 282px;
             height: 35px;
