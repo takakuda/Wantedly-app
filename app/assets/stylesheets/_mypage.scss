@@ -62,6 +62,7 @@
         &__list {
           width: 379px;
           height: 459px;
+          overflow-y: scroll;
           ul {
             margin: 0;
             padding: 0;
