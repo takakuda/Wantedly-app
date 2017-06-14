@@ -1,13 +1,28 @@
 - @recruitments.each do |recruitment|
-  %img.job
-    =image_tag recruitment.image
-  .job-labels 広告プランナー
-  %a.job-title{:href => "/recruitments/#{recruitment.id}"}
-    = recruitment.title
-  .job-introduction
-    = recruitment.text
-  .job-bottom
-    %img.lazy{ :height => "50", :src => "/assets/logo.image.png", :style => "display: block;", :width => "50"}/
-    .job-bottom__campany
-      %a.campany-name Repro.inc
-      %a.campany-prefecture 東京都
+  - if user_signed_in?
+    %img.job
+      =image_tag recruitment.image
+    .job-labels 広告プランナー
+    %a.job-title{:href => "/recruitments/#{recruitment.id}"}
+      = recruitment.title
+    .job-introduction
+      = recruitment.text
+    .job-bottom
+      %img.lazy{ :height => "50", :src => "/assets/logo.image.png", :style => "display: block;", :width => "50"}/
+      .job-bottom__campany
+        %a.campany-name Repro.inc
+        %a.campany-prefecture 東京都
+
+  - else
+    %img.job
+      =image_tag recruitment.image
+    .job-labels 広告プランナー
+    .job-title{:href => "/"}
+      = recruitment.title
+    .job-introduction
+      = recruitment.text
+    .job-bottom
+      %img.lazy{ :height => "50", :src => "/assets/logo.image.png", :style => "display: block;", :width => "50"}/
+      .job-bottom__campany
+        %a.campany-name Repro.inc
+        %a.campany-prefecture 東京都
