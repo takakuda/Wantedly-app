@@ -38,7 +38,26 @@
 
 .recruitment-contents
   .recruitment-contents__center
-    
+    .recruitment-contents__center__left
+      .recruitment-contents__center__left__inner
+        .recruitment-contents__center__left__inner__menu
+          .menu-header
+            %h4 検索条件
+          .menu-contents
+            .job-form
+              %input#search{:autocomplete => "off", :dir => "auto", :name => "q", :placeholder => "エンジニア", :spellcheck => "false", :style => "position: relative; vertical-align: top;", :type => "text"}/
+            .job-form
+              %input#search{:autocomplete => "off", :dir => "auto", :name => "q", :placeholder => "中途採用", :spellcheck => "false", :style => "position: relative; vertical-align: top;", :type => "text"}/
+            .job-form
+              %input#search{:autocomplete => "off", :dir => "auto", :name => "q", :placeholder => "地域や特徴などの条件を追加", :spellcheck => "false", :style => "position: relative; vertical-align: top;", :type => "text"}/
+            .job-word
+              %ul
+                %li ゲーム
+                %li IoT
+                %li 人工知能
+                %li 英語
+                %li フルスタック
+
 
 
 
