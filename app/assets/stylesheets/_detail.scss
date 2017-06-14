@@ -118,10 +118,15 @@
             height: 50px;
             line-height: 50px;
             padding: 0;
-            font-size: 16px;
             background: #60b838;
-            color: #fff;
             border: none;
+            .btn {
+              text-decoration: none;
+              text-align: center;
+              margin-left: 65px;
+              font-size: 16px;
+              color: #fff;
+            }
           }
         }
       }
