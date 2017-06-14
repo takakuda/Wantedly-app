@@ -10,7 +10,7 @@ class RecruitmentsController < ApplicationController
   end
 
   def create
-    @recruitment = Recruitment.create(title: recruitment_params[:title], text: recruitment_params[:text], image: recruitment_params[:image], campany_id: current_campany.id, campany_name: recruitment_params[:campany_name])
+    @recruitment = Recruitment.create(title: recruitment_params[:title], text: recruitment_params[:text], image: recruitment_params[:image], campany_id: current_campany.id, campany_name: recruitment_params[:campany_name], job_type: recruitment_params[:job_type])
 
     redirect_to root_path
   end
@@ -24,6 +24,6 @@ class RecruitmentsController < ApplicationController
   private
 
   def recruitment_params
-    params.require(:recruitment).permit(:title, :text, :image, :id, :campany_name)
+    params.require(:recruitment).permit(:title, :text, :image, :id, :campany_name, :job_type)
   end
 end

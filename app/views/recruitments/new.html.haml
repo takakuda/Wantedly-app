@@ -59,7 +59,7 @@
             .field-label
               = f.label "募集する職種は？"
             .field-select
-              = f.select :job_was, Job.all.map{|o| [o.name, o.id]}
+              = f.text_field :job_type, placeholder: :職種を入力してください
         .recruitment-main__right__contents__title
           .recruitment-main__right__contents__title__form
             .field-label

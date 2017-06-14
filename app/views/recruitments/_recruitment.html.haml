@@ -17,7 +17,8 @@
   - else
     %img.job
       =image_tag recruitment.image
-    .job-labels 広告プランナー
+    .job-labels
+      = recruitment.job_type
     .job-title{:href => "/"}
       = recruitment.title
     .job-introduction
