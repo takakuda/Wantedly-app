@@ -10,7 +10,8 @@
     .job-bottom
       %img.lazy{ :height => "50", :src => "/assets/logo.image.png", :style => "display: block;", :width => "50"}/
       .job-bottom__campany
-        %a.campany-name Repro.inc
+        %a.campany-name
+          = recruitment.campany_name
         %a.campany-prefecture 東京都
 
   - else
@@ -24,5 +25,6 @@
     .job-bottom
       %img.lazy{ :height => "50", :src => "/assets/logo.image.png", :style => "display: block;", :width => "50"}/
       .job-bottom__campany
-        %a.campany-name Repro.inc
-        %a.campany-prefecture 東京都
+        %a.campany-name
+          = recruitment.campany_name
+          .campany-prefecture 東京都

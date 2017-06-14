@@ -385,15 +385,11 @@
             float: left;
           }
           &__campany {
-            width: 67px;
+            width: 400px;
             height: 44px;
-            flex: 0 1 auto;
-            min-width: 0;
-            float: left;
-            padding-left: 5px;
+            padding-left: 70px;
             .campany-name {
               color: #24282A;
-              margin: 0;
               font-size: 14px;
               font-weight: 500;
               line-height: 1.3em;
@@ -402,7 +398,7 @@
                 font-weight: 300;
                 font-size: 12px;
                 color: #9DA0A4;
-              }
+            }
           }
         }
       }
