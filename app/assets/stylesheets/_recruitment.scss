@@ -48,7 +48,7 @@
         }
     }
   }
-  .btn {
+  .calendar-btn {
     padding-left: 650px;
     font-size: 14px;
     text-align: center;
@@ -79,6 +79,7 @@
       right: 10px;
       border: 1px solid #9DA0A4;
       z-index: 2;
+      background-color: #fff;
       &__account {
         width: 280px;
         height: 84px;
