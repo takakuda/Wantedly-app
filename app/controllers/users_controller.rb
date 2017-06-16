@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
   def show
-    @recruitments = current_user.recruitments
+    @recruitments = current_user.recruitments.order("created_at DESC").each do
     @applies = Apply.where(user_id: current_user.id)
+    end
   end
+
 
 private
   def user_params
