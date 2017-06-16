@@ -1,0 +1,17 @@
+.menu-wrapper
+.info-bar
+  %p Wantedlyは、月間150万人が利用する国内最大級のビジネスSNSです
+%header
+  .header-logo
+    %img.logo{:src => "/assets/wantedly.logo.png"}
+  .header-form
+    .field-input
+    %input#search{:autocomplete => "off", :dir => "auto", :name => "q", :placeholder => "人や会社、募集を検索", :spellcheck => "false", :style => "position: relative; vertical-align: top;", :type => "text"}/
+  .field-right
+    %ul
+      %li
+        %a#header-recruiter{:href => "/campanies/sign_in"} 採用担当者の方はこちら
+      %li
+        %a#header-signup.data-qtip.header-login-button.facebook{"aria-describedby" => "qtip-0", "data-hasqtip" => "0", "data-qtip-at" => "bottom center", "data-qtip-my" => "top right", "data-qtipv" => "Facebookのアカウントで登録・ログインしていただきます。Wantedlyが許可無くウォール等へ投稿することはありません。", :href => "https://www.wantedly.com/user/auth/facebook?ref=header_signup"}
+      %li
+        %a.log_in{:href => "/users/sign_in"} ログイン
