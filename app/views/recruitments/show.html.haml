@@ -29,7 +29,8 @@
           = @recruitment.title
         .detail-contents__main__header__title__name
           .detail-contents__main__header__title__name__icon
-          %a.campany-name 株式会社 モンスターラボ
+          %a.campany-name
+            = @recruitment.campany_name
       .detail-contents__main__header__image
         .detail-contents__main__header__image__main
           = @recruitment.image

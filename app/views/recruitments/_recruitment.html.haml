@@ -2,7 +2,8 @@
   - if user_signed_in?
     %img.job
       =image_tag recruitment.image
-    .job-labels 広告プランナー
+    .job-labels
+      = recruitment.job_type
     %a.job-title{:href => "/recruitments/#{recruitment.id}"}
       = recruitment.title
     .job-introduction
