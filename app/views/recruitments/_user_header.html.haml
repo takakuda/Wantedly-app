@@ -17,7 +17,8 @@
           %span{:style => "position: relative; display: inline-block; direction: ltr;"}
             %input.input{:autocomplete => "off", :dir => "auto", :name => "q", :placeholder => "人や会社、募集を検索", :spellcheck => "false", :style => "position: relative; vertical-align: top;", :type => "text"}/
           %i.wt-icon.wt-icon-search-short
-  = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+  %a.calendar-btn 面接予定
+
   .header__profile
     %img.photo{:height => "40", :src => "/assets/icon.photo.jpg", :style => "display: block", :width => "40"}
     #modal-overlay
@@ -45,4 +46,4 @@
             %li
               %a.user-menu{:href => "/"}アカウント設定
             %li
-              %a.user-menu{:href => "/"}ログアウト
+              = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'user-menu'
