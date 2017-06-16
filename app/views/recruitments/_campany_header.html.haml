@@ -17,6 +17,34 @@
           %span{:style => "position: relative; display: inline-block; direction: ltr;"}
             %input.input{:autocomplete => "off", :dir => "auto", :name => "q", :placeholder => "人や会社、募集を検索", :spellcheck => "false", :style => "position: relative; vertical-align: top;", :type => "text"}/
           %i.wt-icon.wt-icon-search-short
-  = link_to "ログアウト", destroy_campany_session_path, method: :delete, class: 'btn'
+
   .header__profile
     %img.photo{:height => "40", :src => "/assets/icon.photo.jpg", :style => "display: block", :width => "40"}
+    #modal-overlay
+      .hidden-menu
+        .hidden-menu__account
+          %ul
+            %li
+              %a.account-link
+                .name-area
+                  .name-profile
+                    / = current_campany.name
+                  .name-edit プロフィール編集
+        .hidden-menu__visit
+          %ul
+            %li
+              %a.apply-visit 応募した企業
+            %li
+              %a.apply-visit{:href => "/"} 保存した募集
+        .hidden-menu__user
+          %ul
+            %li
+              %a.user-menu{:href => "/"} フォローしている会社
+            %li
+              %a.user-menu{:href => "/"}友達を招待
+            %li
+              %a.user-menu{:href => "/"}アカウント設定
+            %li
+              = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'user-menu'
+
+
