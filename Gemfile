@@ -45,6 +45,8 @@ gem 'carrierwave'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
 gem 'fog'
+gem 'mini_magick'
+gem 'dotenv-rails'
 
 group :development, :test do
   gem 'byebug', platform: :mri
