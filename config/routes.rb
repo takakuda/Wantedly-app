@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   end
   resources :users, only: [:show]
   get   'users/:id'   =>  'users#show'
+  get   'campanies/:id'  =>  'campanies#show'
 end
