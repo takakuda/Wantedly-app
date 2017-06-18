@@ -4,6 +4,7 @@ class User < ApplicationRecord
   belongs_to :recruitments
   has_many :recruitments, through: :applies
   has_many :applies
+  has_many :campanies, through: :applies
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 end
