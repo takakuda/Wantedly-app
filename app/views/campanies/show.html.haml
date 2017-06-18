@@ -1,0 +1,29 @@
+= render '/recruitments/campany_header'
+
+.mypage
+  .mypage__main
+    .mypage__main__header
+      .user-icon
+        %img{:alt => "Picture?height=100&width=100", :height => "50", :src => "https://graph.facebook.com/788817007943535/picture?height=100&width=100", :width => "50"}/
+      .user-message メッセージ
+    .mypage__main__contents
+      .mypage__main__contents__left
+        .mypage__main__contents__left__header
+          %ul
+            %li.apply 応募
+            %li.message 非表示のメッセージ
+        .mypage__main__contents__left__list
+          %ul
+            %li
+              - @applies.each do |apply|
+                .campany-name
+                  .campany-name__icon
+                  .campany-name__detail
+                    .campany-name__detail__top
+                      = apply.user_name
+
+      .mypage__main__contents__right
+        .mypage__main__contents__right__title
+          %a.title アジアナンバーワンを目指すインフラエンジニア来れ！！
+        .mypage__main__contents__right__area
+        .mypage__main__contents__right__message
