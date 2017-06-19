@@ -15,9 +15,9 @@ CarrierWave.configure do |config|
     case Rails.env
     when 'development'
         config.fog_directory  = 'wantedly-bucket'
-        config.asset_host = 'https://s3.amazonaws.com/wantedly-bucket'
+        config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/wantedly-bucket'
     when 'production'
         config.fog_directory  = 'wantedly-bucket'
-        config.asset_host = 'https://s3.amazonaws.com/wantedly-bucket'
+        config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/wantedly-bucket'
     end
 end
