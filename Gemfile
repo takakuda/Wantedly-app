@@ -35,7 +35,6 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'unicorn'
 gem 'mechanize'
 gem 'haml-rails'
 gem 'erb2haml'
@@ -47,6 +46,11 @@ gem 'momentjs-rails'
 gem 'fog'
 gem 'mini_magick'
 gem 'dotenv-rails'
+gem 'rmagick'
+
+group :production do
+  gem 'unicorn'
+end
 
 group :development, :test do
   gem 'byebug', platform: :mri
