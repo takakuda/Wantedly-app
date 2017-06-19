@@ -17,9 +17,38 @@
           %span{:style => "position: relative; display: inline-block; direction: ltr;"}
             %input.input{:autocomplete => "off", :dir => "auto", :name => "q", :placeholder => "人や会社、募集を検索", :spellcheck => "false", :style => "position: relative; vertical-align: top;", :type => "text"}/
           %i.wt-icon.wt-icon-search-short
-  = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+
   .header__profile
     %img.photo{:height => "40", :src => "/assets/icon.photo.jpg", :style => "display: block", :width => "40"}
+    #modal-overlay
+      .hidden-menu
+        .hidden-menu__account
+          %ul
+            %li
+              %a.account-link
+                .name-area
+                  .name-profile
+                    / = current_campany.name
+                  .name-edit プロフィール編集
+        .hidden-menu__visit
+          %ul
+            %li
+              %a.apply-visit{:href => "/campanies/show"} 応募求人
+            %li
+              %a.apply-visit{:href => "/"} 保存した募集
+        .hidden-menu__user
+          %ul
+            %li
+              %a.user-menu{:href => "/"} フォローしている会社
+            %li
+              %a.user-menu{:href => "/"}友達を招待
+            %li
+              %a.user-menu{:href => "/"}アカウント設定
+            %li
+              = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'user-menu'
+
+
+
 .detail-contents
   .detail-contents__main
     .detail-contents__main__header
@@ -33,7 +62,7 @@
             = @recruitment.campany_name
       .detail-contents__main__header__image
         .detail-contents__main__header__image__main
-          = @recruitment.image
+          = image_tag @recruitment.image
         %ul.bottom-menu
           %li.time 2017/06/10
           %li.friends 社員とあなたの共通の友達
@@ -47,4 +76,7 @@
           - if current_user
             .apply-btn
               = link_to "話を聞きにいきたい", recruitment_applies_path(@recruitment), method: :post, class:'btn'
+
+
+<img src="https://s3-ap-northeast-1.amazonaws.com/wantedly-bucket/uploads/recruitment/image/58/job.image1.png" alt="Job.image1">
 
