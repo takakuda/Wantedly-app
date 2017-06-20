@@ -2,7 +2,7 @@ set :linked_files, %w{ config/secrets.yml }
 # config valid only for current version of Capistrano
 lock "3.8.1"
 
-set :application, 'Wantedly-app'
+set :application, 'Wantedly'
 set :repo_url, 'git@github.com:takakuda/Wantedly-app.git'
 
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
