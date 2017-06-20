@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   get   'users/:id'   =>  'users#show'
   get   'campanies/:id'  =>  'campanies#show'
+  post 'gcals/create_event_self' => 'gcals#create_event_self'
 end
