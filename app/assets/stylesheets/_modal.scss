@@ -13,9 +13,10 @@
     z-index: 3;
     background-color: #fff;
     .menu-btn {
-      position: fixed;
+      position: absolute;
       right: 400px;
-      bottom: 105px;
+      bottom: 150px;
+      position: fixed;
     }
   }
 }
