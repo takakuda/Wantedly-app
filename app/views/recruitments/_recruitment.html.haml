@@ -1,32 +1,15 @@
 - @recruitments.each do |recruitment|
-  - if user_signed_in?
-    %img.job
-      =image_tag recruitment.image
-    .job-labels
-      = recruitment.job_type
-    %a.job-title{:href => "/recruitments/#{recruitment.id}"}
-      = recruitment.title
-    .job-introduction
-      = recruitment.text
-    .job-bottom
-      %img.lazy{ :height => "50", :src => "/assets/logo.image.png", :style => "display: block;", :width => "50"}/
-      .job-bottom__campany
-        %a.campany-name
-          = recruitment.campany_name
-        %a.campany-prefecture 東京都
-
-  - else
-    %img.job
-      =image_tag recruitment.image
-    .job-labels
-      = recruitment.job_type
-    .job-title{:href => "/"}
-      = recruitment.title
-    .job-introduction
-      = recruitment.text
-    .job-bottom
-      %img.lazy{ :height => "50", :src => "/assets/logo.image.png", :style => "display: block;", :width => "50"}/
-      .job-bottom__campany
-        %a.campany-name
-          = recruitment.campany_name
-          .campany-prefecture 東京都
+  %img.job
+    =image_tag recruitment.image
+  .job-labels
+    = recruitment.job_type
+  %a.job-title{:href => "/recruitments/#{recruitment.id}"}
+    = recruitment.title
+  .job-introduction
+    = recruitment.text
+  .job-bottom
+    %img.lazy{ :height => "50", :src => "/assets/logo.image.png", :style => "display: block;", :width => "50"}/
+    .job-bottom__campany
+      %a.campany-name
+        = recruitment.campany_name
+      %a.campany-prefecture 東京都

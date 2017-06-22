@@ -17,7 +17,11 @@ class RecruitmentsController < ApplicationController
 
   def show
     @recruitment = Recruitment.find(params[:id])
-    @user = current_user.id
+    if user_signed_in?
+      @user = current_user.id
+    elsif campany_signed_in?
+      @campany = current_campany.id
+    end
   end
 
 
