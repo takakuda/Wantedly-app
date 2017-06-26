@@ -38,6 +38,7 @@
       width: 761px;
       height: 2711px;
       border-right: 1px solid #9DA0A4;
+      border-left: 1px solid #9DA0A4;
       &__header {
         width: 800px;
         height: 42px;
@@ -226,6 +227,23 @@
           .field-image {
             margin-top: 20px;
           }
+        }
+      }
+      &__teach {
+        width: 760px;
+        height: 150px;
+        border-bottom: 1px solid #9DA0A4;
+        h2 {
+          text-align: center;
+          line-height: 1;
+          font-size: 1.5em;
+          margin-bottom: 20px;
+          color: #6A6E71;
+          margin-top: 140px;
+        }
+        p {
+          text-align: center;
+          color: #9DA0A4;
         }
       }
       &__bottom {

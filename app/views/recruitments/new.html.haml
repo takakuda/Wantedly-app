@@ -39,9 +39,9 @@
       .recruitment-main__right__contents
         .recruitment-main__right__contents__header
           %ul#tabs
-            %li.content STEP1 会社情報の入力
-            %li.content STEP2 社員の追加
-            %li.content STEP3 募集の作成
+            %li.step1 STEP1 会社情報の入力
+            %li.step2 STEP2 社員の追加
+            %li.step3 STEP3 募集の作成
         .recruitment-main__right__contents__message
           %i.icon-heart{:style => "color: pink; line-height: 1.2;"}
             %h2.center-massage 求人ではなく、ラブレターを書くつもりで
@@ -81,6 +81,14 @@
               %abbr (任意)
             .field-image
               = f.file_field :image
+        .recruitment-main__right__contents__teach
+          %i.icon-user
+          %h2.center-message あなたの会社に必要な人は、どんな人ですか？
+          %p これが最後の入力項目です。
+          %p どんな相手に「ラブレター」を送るのか相手を思い浮かべながら書いてみましょう。
+
+
+
         .recruitment-main__right__contents__bottom
           = link_to "戻る", root_path, class: "return-btn"
           = f.submit "投稿する", class: "send-btn"
