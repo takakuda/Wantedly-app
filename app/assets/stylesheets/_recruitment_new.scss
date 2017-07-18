@@ -246,6 +246,24 @@
           color: #9DA0A4;
         }
       }
+      &__what {
+        width: 760px;
+        height: 280px;
+        border-bottom: 1px solid #9DA0A4;
+        border-left: 1px solid #9DA0A4;
+        &__form {
+          width: 700px;
+          height: 200px;
+          margin: auto;
+          padding-top: 40px;
+          .field-label {
+            color: #45494B;
+            font-size: 14px;
+            width: 200px;
+            float: left;
+          }
+        }
+      }
       &__bottom {
         width: 760px;
         height: 70px;
